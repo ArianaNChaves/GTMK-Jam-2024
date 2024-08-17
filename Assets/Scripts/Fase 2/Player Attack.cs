@@ -34,6 +34,7 @@ public class PlayerAttack : MonoBehaviour
             
             //todo reducir el tamanio
             PlayerScale.OnHitPlayer.Invoke();
+            UIBulletManager.OnBulletFired.Invoke();
         }
     }
     private void LookAtEnemy()

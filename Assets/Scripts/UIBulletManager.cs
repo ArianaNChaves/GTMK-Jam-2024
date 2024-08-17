@@ -8,8 +8,8 @@ public class UIBulletManager : MonoBehaviour
     public Sprite filledSlotSprite;
     public BulletDataSO bulletData;
 
-    public event Action OnBulletAdded;
-    public event Action OnBulletFired;
+    public static Action OnBulletAdded;
+    public static Action OnBulletFired;
 
     private void Start()
     {
@@ -54,12 +54,12 @@ public class UIBulletManager : MonoBehaviour
         }
     }
 
-    public void InvokeAddBulletEvent()
+    public static void InvokeAddBulletEvent()
     {
         OnBulletAdded?.Invoke();
     }
 
-    public void InvokeFireBulletEvent()
+    public static void InvokeFireBulletEvent()
     {
         OnBulletFired?.Invoke();
     }
