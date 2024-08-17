@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RingController : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class RingController : MonoBehaviour
 
     [Header("Components")]
     private Animator anims;
+
+    public BulletDataSO bulletData;
 
     private void Awake()
     {
@@ -46,7 +49,11 @@ public class RingController : MonoBehaviour
                 Invoke(nameof(ChangeScale), 0.3f);
                 currentTime = maxTime;
                 UIBulletManager.OnBulletAdded.Invoke();
-                //TODO when reaches max bullets (10) change scene
+                if (bulletData.currentBullets == bulletData.maxBullets)
+                {
+                    //TODO Load new scene
+                    Debug.Log("Load new scene");
+                }
             }
         }
     }
