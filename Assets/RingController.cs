@@ -13,55 +13,40 @@ public class RingController : MonoBehaviour
     private float currentTime;
     [SerializeField] private float maxTime;
 
-    [Header("ChangeTimer")]
-    private float preTime;
-    [SerializeField] private float totTime;
-
     [Header("CanChange")]
     private bool CanChange;
+
+    [Header("Components")]
+    private Animator anims;
+
     private void Awake()
     {
-        preTime = totTime;
         CanChange = true;
+        currentTime = maxTime;
+        anims = GetComponent<Animator>();
+        ChangeScale();
     }
-
     private void Update()
     {
         currentTime -= Time.deltaTime;
 
         if (CanChange)
         {
-            if (currentTime <= 0)
+            if (currentTime <= 1)
             {
                 CanChange = false;
-                preTime -= Time.deltaTime;
-                Invoke(nameof(ChangeScale), 0.5f);
+                anims.Play("TwinkleRing");
+                Invoke(nameof(ChangeScale), 1f);
                 currentTime = maxTime;
-                /*if (preTime <= 0)
-                {
-                    //ChangeScale();
-                    //currentTime = maxTime;
-                    preTime = totTime;
-                }*/
-
             }
 
             if ((transform.localScale) / 0.21f == player.localScale)
             {
                 CanChange = false;
-                preTime -= Time.deltaTime;
-                Invoke(nameof(ChangeScale), 0.5f);
+                Invoke(nameof(ChangeScale), 0.3f);
                 currentTime = maxTime;
-                /*if (preTime <= 0)
-                {
-                    //ChangeScale();
-                    //currentTime = maxTime;
-                    preTime = totTime;
-                }*/
             }
-
         }
-
     }
 
     private void ChangeScale()
@@ -85,6 +70,10 @@ public class RingController : MonoBehaviour
         }
         CanChange = true;
         Debug.Log("Cambio " + randNum);
+    }
+
+    private void PreChange(){
+        Invoke(nameof(ChangeScale), 0.3f);
     }
 
 }
