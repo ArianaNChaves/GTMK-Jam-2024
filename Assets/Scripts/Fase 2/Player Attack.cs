@@ -32,7 +32,10 @@ public class PlayerAttack : MonoBehaviour
     }
     private void LookAtEnemy()
     {
-        transform.up = enemyPosition.position - transform.position;
+        // transform.right = enemyPosition.position - transform.position;
+        Vector3 direction = enemyPosition.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 
     private void ReduceScale()
