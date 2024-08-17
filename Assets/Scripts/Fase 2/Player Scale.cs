@@ -34,6 +34,8 @@ public class PlayerScale : MonoBehaviour
     {
         transform.localScale -= new Vector3(transform.localScale.x * reductionRate, transform.localScale.y * reductionRate, transform.localScale.z * reductionRate);
         HitFlash();
+        UIBulletManager.OnBulletFired.Invoke();
+        //TODO when run out of bullets, back to scene 1
         if (transform.localScale.x <= minRate)
         {
             Debug.Log("Chiquito, volver a juntar balas");
