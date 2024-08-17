@@ -1212,6 +1212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1127202341}
   maxTime: 5
+  bulletData: {fileID: 11400000, guid: 7a11cbbe34b32af4a8eeb1a17e19d006, type: 2}
 --- !u!212 &883521758
 SpriteRenderer:
   m_ObjectHideFlags: 0
