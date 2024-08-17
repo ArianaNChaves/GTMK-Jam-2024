@@ -22,7 +22,6 @@ public class PlayerScale : MonoBehaviour
 
     private void ReduceScale()
     {
-        Debug.Log("Se llamo evento");
         transform.localScale -= new Vector3(transform.localScale.x * reductionRate, transform.localScale.y * reductionRate, transform.localScale.z * reductionRate);
         if (transform.localScale.x <= minRate)
         {

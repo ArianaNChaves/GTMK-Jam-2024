@@ -6,6 +6,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed = 10.0f;
+    [SerializeField] private ParticleSystem impact;
 
     private Vector3 _direction;
     private Rigidbody2D _rigidbody;
@@ -14,6 +15,7 @@ public class Bullet : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        impact = GetComponent<ParticleSystem>();
     }
 
     public void Initiate(Transform enemyTarget)
@@ -30,11 +32,13 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            impact.Play();
             DestroyBullet();
         }
+        
     }
     private void DestroyBullet()
     {
-        Destroy(gameObject);
+        Destroy(gameObject,0.05f);
     }
 }

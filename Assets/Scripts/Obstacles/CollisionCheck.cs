@@ -9,7 +9,6 @@ public class CollisionCheck : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             PlayerScale.OnHitPlayer.Invoke();
-            Debug.Log("Hit2");
         }
     }
 }

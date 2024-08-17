@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +10,14 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float bulletSpeed;
 
-
     private GameObject _bullet;
     private Bullet _bulletScript;
+
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
+
     void Update()
     {
         LookAtEnemy();
