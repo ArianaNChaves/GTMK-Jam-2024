@@ -35,6 +35,7 @@ public class PlayerAttack : MonoBehaviour
             //todo reducir el tamanio
             PlayerScale.OnHitPlayer.Invoke();
             UIBulletManager.OnBulletFired.Invoke();
+            //TODO when run out of bullets, back to scene 1
         }
     }
     private void LookAtEnemy()

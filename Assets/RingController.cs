@@ -45,6 +45,8 @@ public class RingController : MonoBehaviour
                 CanChange = false;
                 Invoke(nameof(ChangeScale), 0.3f);
                 currentTime = maxTime;
+                UIBulletManager.OnBulletAdded.Invoke();
+                //TODO when reaches max bullets (10) change scene
             }
         }
     }
