@@ -32,6 +32,7 @@ public class PlayerScale : MonoBehaviour
 
     private void ReduceScale()
     {
+        //todo Cambiar mas smooth la escala
         transform.localScale -= new Vector3(transform.localScale.x * reductionRate, transform.localScale.y * reductionRate, transform.localScale.z * reductionRate);
         HitFlash();
         UIBulletManager.OnBulletFired.Invoke();
