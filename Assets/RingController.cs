@@ -16,58 +16,74 @@ public class RingController : MonoBehaviour
     [Header("ChangeTimer")]
     private float preTime;
     [SerializeField] private float totTime;
+
+    [Header("CanChange")]
+    private bool CanChange;
     private void Awake()
     {
         preTime = totTime;
+        CanChange = true;
     }
 
     private void Update()
     {
         currentTime -= Time.deltaTime;
-        
-        if (currentTime <= 0)
+
+        if (CanChange)
         {
-            preTime -= Time.deltaTime;
-            if (preTime <=0)
+            if (currentTime <= 0)
             {
-                ChangeScale();
+                CanChange = false;
+                preTime -= Time.deltaTime;
+                Invoke(nameof(ChangeScale), 0.5f);
                 currentTime = maxTime;
-                preTime = totTime;
+                /*if (preTime <= 0)
+                {
+                    //ChangeScale();
+                    //currentTime = maxTime;
+                    preTime = totTime;
+                }*/
+
             }
-            
+
+            if ((transform.localScale) / 0.21f == player.localScale)
+            {
+                CanChange = false;
+                preTime -= Time.deltaTime;
+                Invoke(nameof(ChangeScale), 0.5f);
+                currentTime = maxTime;
+                /*if (preTime <= 0)
+                {
+                    //ChangeScale();
+                    //currentTime = maxTime;
+                    preTime = totTime;
+                }*/
+            }
+
         }
 
-        if ((transform.localScale)/0.21f == player.localScale)
-        {
-            preTime -= Time.deltaTime;
-            if (preTime <= 0)
-            {
-                ChangeScale();
-                currentTime = maxTime;
-                preTime = totTime;
-            }
-        }
     }
 
     private void ChangeScale()
     {
         int randNum = Random.Range(0, 20);
-       
+
         switch (randNum % 4)
         {
             case 0:
                 transform.localScale = new Vector2(1 * 0.21f, 1 * 0.21f);
                 break;
             case 1:
-                transform.localScale = new Vector2(2* 0.21f, 2* 0.21f);
+                transform.localScale = new Vector2(2 * 0.21f, 2 * 0.21f);
                 break;
             case 2:
-                transform.localScale = new Vector2(3 * 0.21f, 3* 0.21f);
+                transform.localScale = new Vector2(3 * 0.21f, 3 * 0.21f);
                 break;
             case 3:
-                transform.localScale = new Vector2(4* 0.21f, 4* 0.21f);
+                transform.localScale = new Vector2(4 * 0.21f, 4 * 0.21f);
                 break;
         }
+        CanChange = true;
         Debug.Log("Cambio " + randNum);
     }
 
