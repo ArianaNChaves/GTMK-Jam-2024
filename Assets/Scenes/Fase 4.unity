@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 63433000}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -685,7 +685,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   center: {fileID: 1315097265}
   pointB: {fileID: 477954088}
-  repeatRate: 2
   speed: 1
 --- !u!212 &351526389
 SpriteRenderer:
@@ -786,7 +785,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   center: {fileID: 1315097265}
   pointB: {fileID: 1304697235}
-  repeatRate: 1
   speed: 1
 --- !u!212 &463159388
 SpriteRenderer:
@@ -1184,7 +1182,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   center: {fileID: 1315097265}
   pointB: {fileID: 1327921949}
-  repeatRate: 3
   speed: 1
 --- !u!1 &1304697233
 GameObject:
@@ -1554,7 +1551,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   center: {fileID: 1315097265}
   pointB: {fileID: 1434118736}
-  repeatRate: 2
   speed: 1
 --- !u!212 &1455261224
 SpriteRenderer:
