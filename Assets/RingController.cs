@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using EasyTransition;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class RingController : MonoBehaviour
 {
@@ -18,6 +21,13 @@ public class RingController : MonoBehaviour
 
     [Header("Components")]
     private Animator anims;
+    [Header("Transitions")]
+    [SerializeField] private TransitionSettings transition;
+    [SerializeField] private float LoadDelay;
+    [SerializeField] private string scene;
+    private TransitionManager manager;
+
+    public BulletDataSO bulletData;
 
     private void Awake()
     {
@@ -25,6 +35,7 @@ public class RingController : MonoBehaviour
         currentTime = maxTime;
         anims = GetComponent<Animator>();
         ChangeScale();
+        manager = TransitionManager.Instance();
     }
     private void Update()
     {
@@ -36,19 +47,25 @@ public class RingController : MonoBehaviour
             {
                 CanChange = false;
                 anims.Play("TwinkleRing");
-                Invoke(nameof(ChangeScale), 1f);
                 currentTime = maxTime;
             }
 
             if ((transform.localScale) / 0.21f == player.localScale)
             {
+                UIBulletManager.OnBulletAdded.Invoke();
                 CanChange = false;
                 Invoke(nameof(ChangeScale), 0.3f);
                 currentTime = maxTime;
-                UIBulletManager.OnBulletAdded.Invoke();
-                //TODO when reaches max bullets (10) change scene
+            }
+            
+            if (bulletData.currentBullets == bulletData.maxBullets)
+            {
+                //TODO Load new scene
+                manager.Transition(scene, transition, LoadDelay);
+                Debug.Log("Load new scene");
             }
         }
+
     }
 
     private void ChangeScale()
@@ -57,25 +74,24 @@ public class RingController : MonoBehaviour
 
         switch (randNum % 4)
         {
+            //TODO Smooth Scale Change
             case 0:
-                transform.localScale = new Vector2(1 * 0.21f, 1 * 0.21f);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(1 * 0.21f, 1 * 0.21f), 1);
                 break;
             case 1:
-                transform.localScale = new Vector2(2 * 0.21f, 2 * 0.21f);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(2 * 0.21f, 2 * 0.21f), 1);
+                //transform.localScale = new Vector2(2 * 0.21f, 2 * 0.21f);
                 break;
             case 2:
-                transform.localScale = new Vector2(3 * 0.21f, 3 * 0.21f);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(3 * 0.21f, 3 * 0.21f), 1);
+                //transform.localScale = new Vector2(3 * 0.21f, 3 * 0.21f);
                 break;
             case 3:
-                transform.localScale = new Vector2(4 * 0.21f, 4 * 0.21f);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(4 * 0.21f, 4 * 0.21f), 1);
+                //transform.localScale = new Vector2(4 * 0.21f, 4 * 0.21f);
                 break;
         }
         CanChange = true;
-        Debug.Log("Cambio " + randNum);
-    }
-
-    private void PreChange(){
-        Invoke(nameof(ChangeScale), 0.3f);
     }
 
 }

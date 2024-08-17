@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EasyTransition;
 
 public class PlayerScale : MonoBehaviour
 {
@@ -14,11 +15,20 @@ public class PlayerScale : MonoBehaviour
     private Color _default;
     private Color _hit;
     private SpriteRenderer _spriteRenderer;
+
+    public BulletDataSO bulletData;
+
+    [Header("Transitions")]
+    [SerializeField] private TransitionSettings transition;
+    [SerializeField] private float LoadDelay;
+    [SerializeField] private string scene;
+    private TransitionManager manager;
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _default = _spriteRenderer.color;
         _hit = Color.white;
+        manager = TransitionManager.Instance();
     }
 
     private void OnEnable()
@@ -37,8 +47,9 @@ public class PlayerScale : MonoBehaviour
         HitFlash();
         UIBulletManager.OnBulletFired.Invoke();
         //TODO when run out of bullets, back to scene 1
-        if (transform.localScale.x <= minRate)
+        if (bulletData.currentBullets <= 0/*transform.localScale.x <= minRate*/)
         {
+            manager.Transition(scene, transition, LoadDelay);
             Debug.Log("Chiquito, volver a juntar balas");
         }
     }

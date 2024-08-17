@@ -19,7 +19,10 @@ public class PlayerControl : MonoBehaviour
     }
 
     public void ChangeScale(bool Match){
-        
+        if (transform.localScale == new Vector3(7,7,0) && Match)
+        {
+            return;
+        }
         float scaleMod = scaleVar;
         if (!Match)
         {
@@ -29,6 +32,6 @@ public class PlayerControl : MonoBehaviour
         {
             return;
         }
-        transform.localScale = new Vector2(transform.localScale. x + scaleMod, transform.localScale.y + scaleMod);
+        transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(transform.localScale. x + scaleMod, transform.localScale.y + scaleMod),1);
     }
 }
