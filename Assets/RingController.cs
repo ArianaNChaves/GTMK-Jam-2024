@@ -74,6 +74,7 @@ public class RingController : MonoBehaviour
 
         switch (randNum % 4)
         {
+            //TODO Smooth Scale Change
             case 0:
                 transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(1 * 0.21f, 1 * 0.21f), 1);
                 break;
