@@ -9,13 +9,11 @@ public class PlayerScale : MonoBehaviour
     public static Action OnHitPlayer;
     
     [SerializeField] private float reductionRate = 0.05f;
-    [SerializeField] private float minRate = 0.05f;
 
     
     private Color _default;
     private Color _hit;
     private SpriteRenderer _spriteRenderer;
-
     public BulletDataSO bulletData;
 
     [Header("Transitions")]

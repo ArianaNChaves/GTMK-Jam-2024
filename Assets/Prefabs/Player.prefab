@@ -199,7 +199,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reductionRate: 0.1
-  minRate: 0.05
+  bulletData: {fileID: 11400000, guid: 7a11cbbe34b32af4a8eeb1a17e19d006, type: 2}
+  transition: {fileID: 11400000, guid: b577ec7af0d48c34a9d31ce17f830a8d, type: 2}
+  LoadDelay: 1
+  scene: 
 --- !u!1 &6593274473074397370
 GameObject:
   m_ObjectHideFlags: 0
