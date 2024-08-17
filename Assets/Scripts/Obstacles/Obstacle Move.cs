@@ -7,7 +7,6 @@ public class ObstacleMove : MonoBehaviour
 {
     [SerializeField] private Transform center;
     [SerializeField] private Transform pointB;
-    [SerializeField] private float repeatRate;
     [SerializeField] private float speed;
 
     private Vector3 _targetPosition;
