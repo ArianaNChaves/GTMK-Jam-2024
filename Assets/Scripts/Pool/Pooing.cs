@@ -35,12 +35,12 @@ public class Pool : MonoBehaviour
             BulletList.Add(Bullet);
             Bullet.transform.SetParent(gameObject.transform);
             StartCoroutine(DestroyBullet(Bullet));
-            Debug.Log("Nueva bala " + BulletList.Count);
+            //Debug.Log("Nueva bala " + BulletList.Count);
             return Bullet;
         }
         else
         {
-            Debug.Log("No more bullets " + BulletList.Count);
+            //Debug.Log("No more bullets " + BulletList.Count);
             return null;
         }
     }

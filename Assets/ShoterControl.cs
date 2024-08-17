@@ -18,7 +18,6 @@ public class ShoterControl : MonoBehaviour
     private void Start()
     {
         currentTime = maxTime;
-        
     }
 
     private void Update()

@@ -19,26 +19,36 @@ public class BulletControl : MonoBehaviour
 
     private string BulletTag;
     private SpriteRenderer SR;
+    private Rigidbody2D rb2D;
 
     [Header("Timer")]
     private float currentTime;
     [SerializeField] private float maxTime;
     private void Awake()
     {
-        currentTime = maxTime;
+
         player = GameObject.FindGameObjectWithTag("Player");
         target = player.transform;
         SR = GetComponent<SpriteRenderer>();
+        rb2D = GetComponent<Rigidbody2D>();
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
+        currentTime = maxTime;
         BulletType();
     }
 
     private void Update()
     {
-        currentTime-=Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        currentTime -= Time.deltaTime;
+
+        Vector2 direction = target.position - transform.position;
+        transform.right = direction;
+        rb2D.velocity = transform.right * speed;
+
+        //transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+
         if (currentTime <= 0)
         {
             pool.GetComponent<Pool>().ReturnBullet(gameObject);
@@ -49,34 +59,42 @@ public class BulletControl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Hit");
-
-        bool Match = true;
-
-        if (other.gameObject.tag != BulletTag)
+        bool Match;
+        if (other.gameObject.tag != "Player")
         {
-            Match = false;
+            if (other.gameObject.tag == BulletTag)
+            {
+                Match = true;
+                player.GetComponent<PlayerControl>().ChangeScale(Match);
+            }
+            else
+            {
+                Match = false;
+                player.GetComponent<PlayerControl>().ChangeScale(Match);
+            }
         }
 
-        player.GetComponent<PlayerControl>().ChangeScale(Match);
+        Return();
         pool.GetComponent<Pool>().ReturnBullet(gameObject);
     }
 
     private void BulletType()
     {
         int randNum = Random.Range(0, 100);
-        Debug.Log(randNum);
+
         if (randNum % 2 == 0)
         {
             BulletTag = "Blue";
             SR.color = Color.blue;
-        }else
+        }
+        else
         {
             BulletTag = "Red";
-            SR.color = Color.blue;
+            SR.color = Color.red;
         }
     }
-    private void OnDisable() {
+    private void Return()
+    {
         BulletTag = null;
         SR.color = Color.white;
     }

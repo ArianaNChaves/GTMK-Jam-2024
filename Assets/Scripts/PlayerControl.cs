@@ -11,12 +11,6 @@ public class PlayerControl : MonoBehaviour
     [Header ("Scale")]
     [SerializeField] private float scaleVar;
     private float direction;
-    void Start()
-    {
-        
-    }
-
-
     void Update()
     {
         direction = Input.GetAxisRaw("Horizontal")  * Time.deltaTime;
@@ -25,11 +19,16 @@ public class PlayerControl : MonoBehaviour
     }
 
     public void ChangeScale(bool Match){
-
+        
+        float scaleMod = scaleVar;
         if (!Match)
         {
-            scaleVar *= -1;
+            scaleMod *= -1;
         }
-        transform.localScale = new Vector2(transform.localScale. x + scaleVar, transform.localScale.y + scaleVar);
+        if (transform.localScale == new Vector3(1,1,0) && !Match)
+        {
+            return;
+        }
+        transform.localScale = new Vector2(transform.localScale. x + scaleMod, transform.localScale.y + scaleMod);
     }
 }
