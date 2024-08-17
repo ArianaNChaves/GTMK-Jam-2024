@@ -9,8 +9,6 @@ public class EnemyRotate : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 50.0f;
     [SerializeField] private float timeToRotate = 4.0f;
-    [SerializeField] private float howMuchRotate = 3.0f;
-
     private void Start()
     {
         StartCoroutine(RotateAround());

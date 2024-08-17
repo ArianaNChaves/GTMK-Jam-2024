@@ -9,15 +9,23 @@ public class Bullet : MonoBehaviour
 
     private Vector3 _direction;
     private Rigidbody2D _rigidbody;
-    
-    void Start()
-    {
-        _rigidbody.velocity = transform.right * bulletSpeed;
-    }
+    private Transform _target;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
     }
+
+    public void Initiate(Transform enemyTarget)
+    {
+        _target = enemyTarget;
+    }
+    void FixedUpdate()
+    {
+        Vector3 direction = _target.position - transform.position;
+        _rigidbody.velocity = new Vector2(direction.x, direction.y).normalized * bulletSpeed;
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))

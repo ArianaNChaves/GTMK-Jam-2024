@@ -10,10 +10,16 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float maxRate = 7.0f;
     [SerializeField] private float minRate = 2.0f;
 
-    private void Start()
+    private void OnEnable()
     {
         EnemyMouth.OnHit += MouthHit;
     }
+
+    private void OnDisable()
+    {
+        EnemyMouth.OnHit -= MouthHit;
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Bullet"))

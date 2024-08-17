@@ -7,14 +7,6 @@ public class PlayerMoveAround : MonoBehaviour
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private Transform enemyPosition;
     
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         MoveAround();
