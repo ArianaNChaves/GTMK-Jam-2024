@@ -242,6 +242,8 @@ MonoBehaviour:
   enemyPosition: {fileID: 70139254}
   bulletPrefab: {fileID: 6638003044790474308, guid: a9eb1746092d4ce4995bf92dd3df3062, type: 3}
   bulletSpeed: 10
+  reductionRate: 0.2
+  minRate: 0.2
 --- !u!58 &63433000
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -426,8 +428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882fb7d5ae367c44e865bea2c23f21f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reductionRate: 0.2
-  expandRate: 0.2
+  reductionRate: 0.05
+  expandRate: 0.05
   maxRate: 7
   minRate: 2
 --- !u!1 &145153791
@@ -693,7 +695,7 @@ GameObject:
   - component: {fileID: 1082103681}
   - component: {fileID: 1082103682}
   m_Layer: 0
-  m_Name: t
+  m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
