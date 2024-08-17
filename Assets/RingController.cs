@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using EasyTransition;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class RingController : MonoBehaviour
@@ -19,6 +21,11 @@ public class RingController : MonoBehaviour
 
     [Header("Components")]
     private Animator anims;
+    [Header("Transitions")]
+    [SerializeField] private TransitionSettings transition;
+    [SerializeField] private float LoadDelay;
+    [SerializeField] private string scene;
+    private TransitionManager manager;
 
     public BulletDataSO bulletData;
 
@@ -28,6 +35,7 @@ public class RingController : MonoBehaviour
         currentTime = maxTime;
         anims = GetComponent<Animator>();
         ChangeScale();
+        manager = TransitionManager.Instance();
     }
     private void Update()
     {
@@ -39,23 +47,25 @@ public class RingController : MonoBehaviour
             {
                 CanChange = false;
                 anims.Play("TwinkleRing");
-                Invoke(nameof(ChangeScale), 1f);
                 currentTime = maxTime;
             }
 
             if ((transform.localScale) / 0.21f == player.localScale)
             {
+                UIBulletManager.OnBulletAdded.Invoke();
                 CanChange = false;
                 Invoke(nameof(ChangeScale), 0.3f);
                 currentTime = maxTime;
-                UIBulletManager.OnBulletAdded.Invoke();
-                if (bulletData.currentBullets == bulletData.maxBullets)
-                {
-                    //TODO Load new scene
-                    Debug.Log("Load new scene");
-                }
+            }
+            
+            if (bulletData.currentBullets == bulletData.maxBullets)
+            {
+                //TODO Load new scene
+                manager.Transition(scene, transition, LoadDelay);
+                Debug.Log("Load new scene");
             }
         }
+
     }
 
     private void ChangeScale()
@@ -81,11 +91,6 @@ public class RingController : MonoBehaviour
                 break;
         }
         CanChange = true;
-    }
-
-    private void PreChange()
-    {
-        Invoke(nameof(ChangeScale), 0.3f);
     }
 
 }

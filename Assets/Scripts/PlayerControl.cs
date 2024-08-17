@@ -19,7 +19,7 @@ public class PlayerControl : MonoBehaviour
     }
 
     public void ChangeScale(bool Match){
-        if (transform.localScale == new Vector3(7,7,0))
+        if (transform.localScale == new Vector3(7,7,0) && Match)
         {
             return;
         }
