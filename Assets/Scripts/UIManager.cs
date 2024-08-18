@@ -17,6 +17,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject creditsPanel;
     [SerializeField] private GameObject settingsPanel;
 
+    [Header("Data")] 
+    [SerializeField] private ScenesSO sceneData;
+
     private void Awake()
     {
         playButton.onClick.AddListener(OnPlayButtonClicked);
@@ -27,6 +30,7 @@ public class UIManager : MonoBehaviour
     
     private void OnPlayButtonClicked()
     {
+        sceneData.NextScene();
         Debug.Log("play");
     }
 

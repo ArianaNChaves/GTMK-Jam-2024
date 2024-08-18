@@ -21,11 +21,9 @@ public class RingController : MonoBehaviour
 
     [Header("Components")]
     private Animator anims;
-    [Header("Transitions")]
-    [SerializeField] private TransitionSettings transition;
-    [SerializeField] private float LoadDelay;
-    [SerializeField] private string scene;
-    private TransitionManager manager;
+    
+    [Header("Data")] 
+    [SerializeField] private ScenesSO sceneData;
 
     public BulletDataSO bulletData;
 
@@ -35,7 +33,6 @@ public class RingController : MonoBehaviour
         currentTime = maxTime;
         anims = GetComponent<Animator>();
         ChangeScale();
-        manager = TransitionManager.Instance();
     }
     private void Update()
     {
@@ -61,7 +58,7 @@ public class RingController : MonoBehaviour
             if (bulletData.currentBullets == bulletData.maxBullets)
             {
                 //TODO Load new scene
-                manager.Transition(scene, transition, LoadDelay);
+                sceneData.NextScene();
                 Debug.Log("Load new scene");
             }
         }
