@@ -8,14 +8,17 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private Transform enemyPosition;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private  BulletDataSO bulletData;
     [SerializeField] private float bulletSpeed;
 
     private GameObject _bullet;
     private Bullet _bulletScript;
+    private bool _canFire;
 
     private void Start()
     {
         Cursor.visible = false;
+        _canFire = true;
     }
 
     void Update()
@@ -25,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
     }
     private void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && _canFire)
         {
             
             _bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
@@ -34,6 +37,13 @@ public class PlayerAttack : MonoBehaviour
             
             //todo reducir el tamanio
             PlayerScale.OnHitPlayer.Invoke();
+            UIBulletManager.OnBulletFired.Invoke();
+        
+            if (bulletData.currentBullets <= 0)
+            {
+                _canFire = false;
+                Debug.Log("Chiquito, volver a juntar balas");
+            }
         }
     }
     private void LookAtEnemy()

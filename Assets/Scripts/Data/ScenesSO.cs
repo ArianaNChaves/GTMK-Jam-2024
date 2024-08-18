@@ -35,5 +35,15 @@ public class ScenesSO : ScriptableObject
         CurrentPath = scene;
         TransitionManager.Instance().Transition(scene, transition, LoadDelay);
     }
+
+    public void LastScene()
+    {
+        if (_index == 0) return;
+        _index--;
+        string scene = goldenPathList[_index];
+        CurrentPath = scene;
+        TransitionManager.Instance().Transition(scene, transition, LoadDelay);
+
+    }
     
 }

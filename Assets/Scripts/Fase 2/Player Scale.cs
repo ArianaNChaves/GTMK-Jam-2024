@@ -9,7 +9,6 @@ public class PlayerScale : MonoBehaviour
     public static Action OnHitPlayer;
     
     [SerializeField] private float reductionRate = 0.05f;
-    [SerializeField] private  BulletDataSO bulletData;
     [SerializeField] private  ScenesSO sceneData;
 
 
@@ -38,13 +37,7 @@ public class PlayerScale : MonoBehaviour
         //todo Cambiar mas smooth la escala
         transform.localScale -= new Vector3(transform.localScale.x * reductionRate, transform.localScale.y * reductionRate, transform.localScale.z * reductionRate);
         HitFlash();
-        UIBulletManager.OnBulletFired.Invoke();
-        //TODO when run out of bullets, back to scene 1
-        if (bulletData.currentBullets <= 0)
-        {
-            sceneData.NextScene();
-            Debug.Log("Chiquito, volver a juntar balas");
-        }
+        
     }
     private void HitFlash()
     {
