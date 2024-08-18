@@ -48,7 +48,7 @@ public class RingController : MonoBehaviour
                 currentTime = maxTime;
             }
 
-            if ((transform.localScale) / 0.21f == player.localScale)
+            if ((transform.localScale) / 1.5f == player.localScale)
             {
                 UIBulletManager.OnBulletAdded.Invoke();
                 CanChange = false;
@@ -64,30 +64,28 @@ public class RingController : MonoBehaviour
                 Debug.Log("Load new scene");
             }
         }
-
     }
 
     private void ChangeScale()
     {
         int randNum = Random.Range(0, 20);
-
         switch (randNum % 4)
         {
             //TODO Smooth Scale Change
             case 0:
-                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(1 * 0.21f, 1 * 0.21f), 1);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(1 * 1.5f, 1 * 1.5f), 1);
                 break;
             case 1:
-                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(2 * 0.21f, 2 * 0.21f), 1);
-                //transform.localScale = new Vector2(2 * 0.21f, 2 * 0.21f);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(2 * 1.5f, 2 * 1.5f), 1);
+                //transform.localScale = new Vector2(2 * 1.5f, 2 * 1.5f);
                 break;
             case 2:
-                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(3 * 0.21f, 3 * 0.21f), 1);
-                //transform.localScale = new Vector2(3 * 0.21f, 3 * 0.21f);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(3 * 1.5f, 3 * 1.5f), 1);
+                //transform.localScale = new Vector2(3 * 1.5f, 3 * 1.5f);
                 break;
             case 3:
-                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(4 * 0.21f, 4 * 0.21f), 1);
-                //transform.localScale = new Vector2(4 * 0.21f, 4 * 0.21f);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(4 * 1.5f, 4 * 1.5f), 1);
+                //transform.localScale = new Vector2(4 * 1.5f, 4 * 1.5f);
                 break;
         }
         CanChange = true;

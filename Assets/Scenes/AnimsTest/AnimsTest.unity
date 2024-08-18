@@ -290,8 +290,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reductionRate: 0.05
   expandRate: 0.05
-  maxScaleRate: 7
-  minScaleRate: 2
+  sceneData: {fileID: 0}
+  bulletData: {fileID: 0}
+  enemyData: {fileID: 0}
 --- !u!114 &204524763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,8 +1054,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reductionRate: 0.05
   expandRate: 0.05
-  maxScaleRate: 7
-  minScaleRate: 2
+  sceneData: {fileID: 0}
+  bulletData: {fileID: 0}
+  enemyData: {fileID: 0}
 --- !u!114 &1044135595
 MonoBehaviour:
   m_ObjectHideFlags: 0

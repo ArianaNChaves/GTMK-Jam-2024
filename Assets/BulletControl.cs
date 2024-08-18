@@ -24,9 +24,12 @@ public class BulletControl : MonoBehaviour
     [Header("Timer")]
     private float currentTime;
     [SerializeField] private float maxTime;
+
+    private TrailRenderer trail;
+
     private void Awake()
     {
-
+        trail = GetComponent<TrailRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
         target = player.transform;
         SR = GetComponent<SpriteRenderer>();
@@ -46,15 +49,11 @@ public class BulletControl : MonoBehaviour
         Vector2 direction = target.position - transform.position;
         transform.right = direction;
         rb2D.velocity = transform.right * speed;
-
-        //transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-
         if (currentTime <= 0)
         {
             pool.GetComponent<Pool>().ReturnBullet(gameObject);
             currentTime = maxTime;
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -73,8 +72,6 @@ public class BulletControl : MonoBehaviour
                 player.GetComponent<PlayerControl>().ChangeScale(Match);
             }
         }
-
-        Return();
         pool.GetComponent<Pool>().ReturnBullet(gameObject);
     }
 
@@ -85,17 +82,19 @@ public class BulletControl : MonoBehaviour
         if (randNum % 2 == 0)
         {
             BulletTag = "Blue";
-            SR.color = Color.blue;
+            SetColor(new Color32(43, 72, 154, 255));
         }
         else
         {
             BulletTag = "Red";
-            SR.color = Color.red;
+            SetColor(new Color32(154, 45, 65, 255));
         }
     }
-    private void Return()
+
+    private void SetColor(Color color)
     {
-        BulletTag = null;
-        SR.color = Color.white;
+        SR.color = color;
+        trail.startColor = color;
+        trail.endColor = color;
     }
 }
