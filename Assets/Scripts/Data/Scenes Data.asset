@@ -25,5 +25,5 @@ MonoBehaviour:
   - Final Cinematic
   - Credits
   transition: {fileID: 11400000, guid: b577ec7af0d48c34a9d31ce17f830a8d, type: 2}
-  LoadDelay: 1
-  CurrentPath: Main Menu
+  LoadDelay: 0.5
+  CurrentPath: Tutorial
