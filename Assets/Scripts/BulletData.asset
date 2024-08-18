@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587d783ca9d23dc4ba7c8ba84877e678, type: 3}
   m_Name: BulletData
   m_EditorClassIdentifier: 
-  currentBullets: 10
+  currentBullets: 8
   maxBullets: 10

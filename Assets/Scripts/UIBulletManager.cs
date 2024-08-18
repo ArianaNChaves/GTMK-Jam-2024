@@ -44,12 +44,11 @@ public class UIBulletManager : MonoBehaviour
         {
             if (i < bulletData.currentBullets)
             {
-                bulletSlots[i].sprite = filledSlotSprite;
-                bulletSlots[i].enabled = true;
+                bulletSlots[i].color = Color.white;
             }
             else
             {
-                bulletSlots[i].enabled = false;
+                bulletSlots[i].color = Color.clear;
             }
         }
     }
