@@ -44,7 +44,7 @@ public class RingController : MonoBehaviour
             if (currentTime <= 1)
             {
                 CanChange = false;
-                anims.Play("TwinkleRing");
+                anims.Play("Twinkle_Ring");
                 currentTime = maxTime;
             }
 
