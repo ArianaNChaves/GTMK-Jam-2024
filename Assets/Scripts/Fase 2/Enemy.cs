@@ -12,8 +12,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float expandRate = 0.2f;
     [SerializeField] private ScenesSO sceneData;
     [SerializeField] private BulletDataSO bulletData;
+    [SerializeField] private EnemySO enemyData;
 
-    private int _health = 8;
+    private int _health;
     private Color _default;
     private Color _hitOut;
     private Color _hitIn;
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        _health = enemyData.GetMaxHealth();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _default = _spriteRenderer.color;
         _hitIn = Color.white;
@@ -45,7 +47,6 @@ public class Enemy : MonoBehaviour
             {
                 Debug.Log("Perdiste");
                 //todo DSACAR ESTA MIERDA DE ACA
-                sceneData.LastScene();
             }
         }
     }
@@ -54,10 +55,9 @@ public class Enemy : MonoBehaviour
         _health--;
         HitInFlash();
         transform.localScale -= new Vector3(transform.localScale.x * reductionRate, transform.localScale.y * reductionRate, transform.localScale.z * reductionRate);
-        if (_health <= 0)
+        if (_health == 0)
         {
             Debug.Log("Ganaste");
-            sceneData.NextScene();
         }
     }
     private void HitInFlash()

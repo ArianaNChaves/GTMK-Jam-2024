@@ -7,21 +7,29 @@ public class BattleController : MonoBehaviour
 {
     [SerializeField] private BulletDataSO bulletData;
     [SerializeField] private ScenesSO scenesData;
+    [SerializeField] private EnemySO enemyData;
 
     private int _successCount;
     private int _failCount;
-    
+    private bool _firstCheck = false;
+    private int _enemyMaxHealth;
+
+    private void Start()
+    {
+        _enemyMaxHealth = enemyData.GetMaxHealth();
+    }
+
     private void OnEnable()
     {
         EnemyMouth.OnHit += SuccessCount;
-        Enemy.EnemyHit += FailCount;
+        Enemy.EnemyHit += CheckCondition;
         PlayerScale.OnHitPlayer += CheckCondition;
 
     }
     private void OnDisable()
     {
         EnemyMouth.OnHit -= SuccessCount;
-        Enemy.EnemyHit -= FailCount;
+        Enemy.EnemyHit -= CheckCondition;
         PlayerScale.OnHitPlayer -= CheckCondition;
     }
     private void SuccessCount()
@@ -29,27 +37,23 @@ public class BattleController : MonoBehaviour
         _successCount++;
         CheckCondition();
     }
-    private void FailCount()
-    {
-        _failCount++;
-        CheckCondition();
-    }
-
+    
     private void CheckCondition()
     {
-        if (bulletData.currentBullets <= 0)
+        if (bulletData.currentBullets <= 0 && !_firstCheck)
         {
-            if (_successCount >= 8)
+            _firstCheck = true;
+            if (_successCount >= _enemyMaxHealth)
             {
                 Debug.Log("Win Battle");
                 scenesData.NextScene();
             }
-
-            if (_failCount >= 3)
+            else
             {
                 Debug.Log("Lose Battle");
-                scenesData.LastScene();
-            } 
+                scenesData.LastScene(); 
+            }
+
         }
         
     }

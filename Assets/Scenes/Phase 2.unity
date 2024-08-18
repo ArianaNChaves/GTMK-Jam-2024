@@ -276,6 +276,7 @@ MonoBehaviour:
   expandRate: 0.05
   sceneData: {fileID: 11400000, guid: 90eb16772c0c6b74d80189c5d049b1af, type: 2}
   bulletData: {fileID: 11400000, guid: 7a11cbbe34b32af4a8eeb1a17e19d006, type: 2}
+  enemyData: {fileID: 11400000, guid: 50af9c85ab2d07148b0d7fef40fdc85c, type: 2}
 --- !u!1001 &79689700
 PrefabInstance:
   m_ObjectHideFlags: 0
