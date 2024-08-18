@@ -19,23 +19,21 @@ public class ScenesSO : ScriptableObject
 
     [Header("READ ONLY")] 
     [SerializeField] private string CurrentPath = "Main Menu";
-    
-    
-    private TransitionManager manager;
+
+
     private int _index = 0;
     
     public void NextScene()
     {
         if (_index == 10)
         {
-            manager.Transition(goldenPathList[0], transition, LoadDelay);
+            TransitionManager.Instance().Transition(goldenPathList[0], transition, LoadDelay);
             _index = 0;
         }
         string scene = goldenPathList[_index + 1];
         _index++;
         CurrentPath = scene;
-        manager.Transition(scene, transition, LoadDelay);
-        
+        TransitionManager.Instance().Transition(scene, transition, LoadDelay);
     }
     
 }
