@@ -48,7 +48,7 @@ public class RingController : MonoBehaviour
                 currentTime = maxTime;
             }
 
-            if ((transform.localScale) / 1.5f == player.localScale)
+            if (transform.localScale == player.localScale)
             {
                 UIBulletManager.OnBulletAdded.Invoke();
                 CanChange = false;
@@ -73,19 +73,19 @@ public class RingController : MonoBehaviour
         {
             //TODO Smooth Scale Change
             case 0:
-                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(1 * 1.5f, 1 * 1.5f), 1);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(1, 1), 1);
                 break;
             case 1:
-                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(2 * 1.5f, 2 * 1.5f), 1);
-                //transform.localScale = new Vector2(2 * 1.5f, 2 * 1.5f);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(2, 2), 1);
+                //transform.localScale = new Vector2(2, 2);
                 break;
             case 2:
-                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(3 * 1.5f, 3 * 1.5f), 1);
-                //transform.localScale = new Vector2(3 * 1.5f, 3 * 1.5f);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(3, 3), 1);
+                //transform.localScale = new Vector2(3, 3);
                 break;
             case 3:
-                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(4 * 1.5f, 4 * 1.5f), 1);
-                //transform.localScale = new Vector2(4 * 1.5f, 4 * 1.5f);
+                transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(4, 4), 1);
+                //transform.localScale = new Vector2(4, 4);
                 break;
         }
         CanChange = true;
