@@ -6,6 +6,8 @@ using UnityEngine.Serialization;
 
 public class Enemy : MonoBehaviour
 {
+    public static Action EnemyHit;
+    
     [SerializeField] private float reductionRate = 0.2f;
     [SerializeField] private float expandRate = 0.2f;
     [SerializeField] private ScenesSO sceneData;
@@ -13,14 +15,16 @@ public class Enemy : MonoBehaviour
 
     private int _health = 8;
     private Color _default;
-    private Color _hit;
+    private Color _hitOut;
+    private Color _hitIn;
     private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _default = _spriteRenderer.color;
-        _hit = Color.white;
+        _hitIn = Color.white;
+        _hitOut = Color.black;
     }
     private void OnEnable()
     {
@@ -34,7 +38,9 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-          transform.localScale += new Vector3(transform.localScale.x * expandRate, transform.localScale.y * expandRate, transform.localScale.z * expandRate);
+            EnemyHit?.Invoke();
+            HitOutFlash();
+            transform.localScale += new Vector3(transform.localScale.x * expandRate, transform.localScale.y * expandRate, transform.localScale.z * expandRate);
             if (bulletData.currentBullets <= 0 && _health > 0)
             {
                 Debug.Log("Perdiste");
@@ -46,7 +52,7 @@ public class Enemy : MonoBehaviour
     private void MouthHit()
     {
         _health--;
-        HitFlash();
+        HitInFlash();
         transform.localScale -= new Vector3(transform.localScale.x * reductionRate, transform.localScale.y * reductionRate, transform.localScale.z * reductionRate);
         if (_health <= 0)
         {
@@ -54,9 +60,14 @@ public class Enemy : MonoBehaviour
             sceneData.NextScene();
         }
     }
-    private void HitFlash()
+    private void HitInFlash()
     {
-        _spriteRenderer.color = Color.Lerp(_default, _hit, 0.5f);
+        _spriteRenderer.color = Color.Lerp(_default, _hitIn, 0.5f);
+        Invoke(nameof(ReturnToNormalColor), 0.2f);
+    }
+    private void HitOutFlash()
+    {
+        _spriteRenderer.color = Color.Lerp(_default, _hitOut, 0.5f);
         Invoke(nameof(ReturnToNormalColor), 0.2f);
     }
     private void ReturnToNormalColor()

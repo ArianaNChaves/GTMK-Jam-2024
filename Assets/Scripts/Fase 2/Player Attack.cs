@@ -41,7 +41,7 @@ public class PlayerAttack : MonoBehaviour
             if (bulletData.currentBullets <= 0)
             {
                 _canFire = false;
-                Debug.Log("Chiquito, volver a juntar balas");
+                Debug.Log("Sin balas");
             }
         }
     }
