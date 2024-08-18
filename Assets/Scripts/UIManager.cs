@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
     
     private void OnPlayButtonClicked()
     {
+        sceneData.ResetPath();
         sceneData.NextScene();
         Debug.Log("play");
     }

@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     private Vector3 _direction;
     private Rigidbody2D _rigidbody;
     private Transform _target;
+    private bool _isFirstImpact = true;
 
     private void Awake()
     {
@@ -32,10 +33,13 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            impact.Play();
-            DestroyBullet();
+            if (_isFirstImpact)
+            {   
+                impact.Play();
+                DestroyBullet();
+                _isFirstImpact = false;
+            }
         }
-        
     }
     private void DestroyBullet()
     {

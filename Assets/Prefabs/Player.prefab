@@ -150,6 +150,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 765482263260608534}
   enemyPosition: {fileID: 0}
   bulletPrefab: {fileID: 6638003044790474308, guid: a9eb1746092d4ce4995bf92dd3df3062, type: 3}
+  bulletData: {fileID: 11400000, guid: 7a11cbbe34b32af4a8eeb1a17e19d006, type: 2}
   bulletSpeed: 10
 --- !u!58 &7178201933402342693
 CircleCollider2D:
@@ -199,7 +200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reductionRate: 0.1
-  bulletData: {fileID: 11400000, guid: 7a11cbbe34b32af4a8eeb1a17e19d006, type: 2}
   sceneData: {fileID: 11400000, guid: 90eb16772c0c6b74d80189c5d049b1af, type: 2}
 --- !u!1 &6593274473074397370
 GameObject:

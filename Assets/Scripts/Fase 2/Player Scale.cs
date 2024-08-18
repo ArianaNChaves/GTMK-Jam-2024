@@ -9,10 +9,9 @@ public class PlayerScale : MonoBehaviour
     public static Action OnHitPlayer;
     
     [SerializeField] private float reductionRate = 0.05f;
-    [SerializeField] private  BulletDataSO bulletData;
     [SerializeField] private  ScenesSO sceneData;
-
-
+    [SerializeField] private  BulletDataSO bulletData;
+    
     private Color _default;
     private Color _hit;
     private SpriteRenderer _spriteRenderer;
@@ -23,7 +22,6 @@ public class PlayerScale : MonoBehaviour
         _default = _spriteRenderer.color;
         _hit = Color.white;
     }
-
     private void OnEnable()
     {
         OnHitPlayer += ReduceScale;
@@ -32,26 +30,20 @@ public class PlayerScale : MonoBehaviour
     {
         OnHitPlayer -= ReduceScale;
     }
-
     private void ReduceScale()
     {
+        //todo aca va el codigo
+        UIBulletManager.OnBulletFired.Invoke();
+
         //todo Cambiar mas smooth la escala
         transform.localScale -= new Vector3(transform.localScale.x * reductionRate, transform.localScale.y * reductionRate, transform.localScale.z * reductionRate);
         HitFlash();
-        UIBulletManager.OnBulletFired.Invoke();
-        //TODO when run out of bullets, back to scene 1
-        if (bulletData.currentBullets <= 0)
-        {
-            sceneData.NextScene();
-            Debug.Log("Chiquito, volver a juntar balas");
-        }
     }
     private void HitFlash()
     {
         _spriteRenderer.color = Color.Lerp(_default, _hit, 0.5f);
         Invoke(nameof(ReturnToNormalColor), 0.3f);
     }
-
     private void ReturnToNormalColor()
     {
         _spriteRenderer.color = _default;

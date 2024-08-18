@@ -12,7 +12,6 @@ public class EnemyMouth : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("Hit On Hole!");
             OnHit?.Invoke();
         }
     }

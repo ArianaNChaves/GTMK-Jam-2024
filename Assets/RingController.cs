@@ -26,6 +26,7 @@ public class RingController : MonoBehaviour
     [SerializeField] private ScenesSO sceneData;
 
     public BulletDataSO bulletData;
+    private bool _isFullBullets = false;
 
     private void Awake()
     {
@@ -55,8 +56,9 @@ public class RingController : MonoBehaviour
                 currentTime = maxTime;
             }
             
-            if (bulletData.currentBullets == bulletData.maxBullets)
+            if (bulletData.currentBullets == bulletData.maxBullets && !_isFullBullets)
             {
+                _isFullBullets = true;
                 //TODO Load new scene
                 sceneData.NextScene();
                 Debug.Log("Load new scene");
