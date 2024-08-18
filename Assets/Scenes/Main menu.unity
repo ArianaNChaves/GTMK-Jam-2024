@@ -1549,6 +1549,7 @@ MonoBehaviour:
   creditsPanel: {fileID: 1446220030}
   settingsPanel: {fileID: 1027183186}
   sceneData: {fileID: 11400000, guid: 90eb16772c0c6b74d80189c5d049b1af, type: 2}
+  bulletData: {fileID: 11400000, guid: 7a11cbbe34b32af4a8eeb1a17e19d006, type: 2}
 --- !u!4 &763091504
 Transform:
   m_ObjectHideFlags: 0

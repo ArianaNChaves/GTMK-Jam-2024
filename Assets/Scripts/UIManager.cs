@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Data")] 
     [SerializeField] private ScenesSO sceneData;
+    [SerializeField] private BulletDataSO bulletData;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class UIManager : MonoBehaviour
     {
         sceneData.ResetPath();
         sceneData.NextScene();
+        bulletData.currentBullets = 0;
         Debug.Log("play");
     }
 
