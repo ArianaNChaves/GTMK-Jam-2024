@@ -9,12 +9,12 @@ public class PlayerScale : MonoBehaviour
     public static Action OnHitPlayer;
     
     [SerializeField] private float reductionRate = 0.05f;
+    [SerializeField] private  BulletDataSO bulletData;
 
-    
+
     private Color _default;
     private Color _hit;
     private SpriteRenderer _spriteRenderer;
-    public BulletDataSO bulletData;
 
     [Header("Transitions")]
     [SerializeField] private TransitionSettings transition;
@@ -45,7 +45,7 @@ public class PlayerScale : MonoBehaviour
         HitFlash();
         UIBulletManager.OnBulletFired.Invoke();
         //TODO when run out of bullets, back to scene 1
-        if (bulletData.currentBullets <= 0/*transform.localScale.x <= minRate*/)
+        if (bulletData.currentBullets <= 0)
         {
             manager.Transition(scene, transition, LoadDelay);
             Debug.Log("Chiquito, volver a juntar balas");
