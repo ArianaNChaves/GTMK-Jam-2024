@@ -1246,6 +1246,10 @@ PrefabInstance:
       value: Fase 1
       objectReference: {fileID: 0}
     - target: {fileID: 4917103161946397566, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
+      propertyPath: sceneData
+      value: 
+      objectReference: {fileID: 11400000, guid: 90eb16772c0c6b74d80189c5d049b1af, type: 2}
+    - target: {fileID: 4917103161946397566, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
       propertyPath: bulletData
       value: 
       objectReference: {fileID: 11400000, guid: 7a11cbbe34b32af4a8eeb1a17e19d006, type: 2}
