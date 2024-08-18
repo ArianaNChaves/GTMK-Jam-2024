@@ -8,12 +8,10 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float reductionRate = 0.2f;
     [SerializeField] private float expandRate = 0.2f;
-    [SerializeField] private float maxScaleRate = 7.0f;
-    [SerializeField] private float minScaleRate = 2.0f;
     [SerializeField] private ScenesSO sceneData;
     [SerializeField] private BulletDataSO bulletData;
 
-    private int _health = 10;
+    private int _health = 8;
     private Color _default;
     private Color _hit;
     private SpriteRenderer _spriteRenderer;
@@ -39,8 +37,8 @@ public class Enemy : MonoBehaviour
           transform.localScale += new Vector3(transform.localScale.x * expandRate, transform.localScale.y * expandRate, transform.localScale.z * expandRate);
             if (bulletData.currentBullets <= 0 && _health > 0)
             {
-                //todo HACER EN SCENE DATA UN METODO QUE TE LLEVE A LA ESCENA ANTERIOR (index -1)
                 Debug.Log("Perdiste");
+                //todo DSACAR ESTA MIERDA DE ACA
                 sceneData.LastScene();
             }
         }

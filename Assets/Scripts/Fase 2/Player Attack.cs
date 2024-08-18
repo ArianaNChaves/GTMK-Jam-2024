@@ -37,8 +37,7 @@ public class PlayerAttack : MonoBehaviour
             
             //todo reducir el tamanio
             PlayerScale.OnHitPlayer.Invoke();
-            UIBulletManager.OnBulletFired.Invoke();
-        
+            
             if (bulletData.currentBullets <= 0)
             {
                 _canFire = false;

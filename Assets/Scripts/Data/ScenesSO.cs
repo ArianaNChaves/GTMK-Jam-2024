@@ -19,9 +19,7 @@ public class ScenesSO : ScriptableObject
 
     [Header("READ ONLY")] 
     [SerializeField] private string CurrentPath = "Main Menu";
-
-
-    private int _index = 0;
+    [SerializeField] private int _index = 0;
     
     public void NextScene()
     {
@@ -33,6 +31,7 @@ public class ScenesSO : ScriptableObject
         string scene = goldenPathList[_index + 1];
         _index++;
         CurrentPath = scene;
+        Debug.Log($"Me muevo a la escena: {CurrentPath}");
         TransitionManager.Instance().Transition(scene, transition, LoadDelay);
     }
 
@@ -42,8 +41,14 @@ public class ScenesSO : ScriptableObject
         _index--;
         string scene = goldenPathList[_index];
         CurrentPath = scene;
+        Debug.Log($"Vuelvo a la escena: {CurrentPath}");
         TransitionManager.Instance().Transition(scene, transition, LoadDelay);
+    }
 
+    public void ResetPath()
+    {
+        CurrentPath = "Main Menu";
+        _index = 0;
     }
     
 }

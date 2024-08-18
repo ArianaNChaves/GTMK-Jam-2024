@@ -26,4 +26,5 @@ MonoBehaviour:
   - Credits
   transition: {fileID: 11400000, guid: b577ec7af0d48c34a9d31ce17f830a8d, type: 2}
   LoadDelay: 0.5
-  CurrentPath: Main Menu
+  CurrentPath: Phase 3
+  _index: 6
