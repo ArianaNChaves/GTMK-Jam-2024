@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca3a084757af9f4b8301787c1ea4a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 65
+  rotationSpeed: 75
   enemyPosition: {fileID: 0}
 --- !u!114 &4948831762161302866
 MonoBehaviour:
@@ -152,6 +152,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6638003044790474308, guid: a9eb1746092d4ce4995bf92dd3df3062, type: 3}
   bulletData: {fileID: 11400000, guid: 7a11cbbe34b32af4a8eeb1a17e19d006, type: 2}
   bulletSpeed: 10
+  fireRate: 1
 --- !u!58 &7178201933402342693
 CircleCollider2D:
   m_ObjectHideFlags: 0

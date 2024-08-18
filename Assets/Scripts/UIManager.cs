@@ -28,7 +28,13 @@ public class UIManager : MonoBehaviour
         exitButton.onClick.AddListener(OnExitButtonClicked);
         settingsButton.onClick.AddListener(OnSettingsButtonClicked);
     }
-    
+
+    private void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     private void OnPlayButtonClicked()
     {
         sceneData.ResetPath();

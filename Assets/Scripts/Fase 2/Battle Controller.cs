@@ -16,6 +16,8 @@ public class BattleController : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         _enemyMaxHealth = enemyData.GetMaxHealth();
     }
 
