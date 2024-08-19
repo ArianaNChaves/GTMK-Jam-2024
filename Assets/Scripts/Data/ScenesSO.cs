@@ -25,8 +25,10 @@ public class ScenesSO : ScriptableObject
     {
         if (_index == goldenPathList.Count)
         {
-            TransitionManager.Instance().Transition(goldenPathList[0], transition, LoadDelay);
+            string scene = goldenPathList[0];
             _index = 0;
+            CurrentPath = scene;
+            TransitionManager.Instance().Transition(scene, transition, LoadDelay);
         }
         else
         {
