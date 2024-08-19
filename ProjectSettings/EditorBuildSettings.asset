@@ -9,11 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Main menu.unity
     guid: e7802e22fafe88448bddaff6e2cd8c59
   - enabled: 1
-    path: Assets/Scenes/borrar.unity
-    guid: 68c063839c3c45841a2946fc05291517
-  - enabled: 1
-    path: Assets/Scenes/borrar 2.unity
-    guid: e943072c08dada747a0c86d928016ce2
+    path: Assets/Scenes/Tutorial.unity
+    guid: 5d3801fa07e8f764398441206bc916ad
   - enabled: 1
     path: Assets/Scenes/Phase 1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02

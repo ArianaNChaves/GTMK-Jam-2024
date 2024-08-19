@@ -27,6 +27,7 @@ public class RingController : MonoBehaviour
 
     public BulletDataSO bulletData;
     private bool _isFullBullets = false;
+    private int _lastScaleIndex = -1;
 
     private void Awake()
     {
@@ -49,6 +50,7 @@ public class RingController : MonoBehaviour
 
             if (transform.localScale == player.localScale)
             {
+                anims.Play("Idle_Ring");
                 UIBulletManager.OnBulletAdded.Invoke();
                 CanChange = false;
                 Invoke(nameof(ChangeScale), 0.3f);
@@ -67,10 +69,15 @@ public class RingController : MonoBehaviour
 
     private void ChangeScale()
     {
-        int randNum = Random.Range(0, 20);
+        int randNum;
+        do
+        {
+            randNum = Random.Range(0, 20);
+        } while (randNum % 4 == _lastScaleIndex);
+
+        _lastScaleIndex = randNum % 4; 
         switch (randNum % 4)
         {
-            //TODO Smooth Scale Change
             case 0:
                 transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(1, 1), 1);
                 break;

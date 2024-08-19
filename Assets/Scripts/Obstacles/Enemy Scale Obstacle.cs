@@ -17,7 +17,7 @@ public class EnemyScaleObstacle : MonoBehaviour
     private void ScaleObstacle()
     {
         float targetScaleY = Mathf.Lerp(minThreshold, maxThreshold, Mathf.PingPong(Time.time * speed, 1));
-        transform.localScale = new Vector3(transform.localScale.x, targetScaleY, transform.localScale.z);
+        float targetScaleX = Mathf.Lerp(minThreshold, maxThreshold, Mathf.PingPong(Time.time * speed, 1));
+        transform.localScale = new Vector3(targetScaleX, targetScaleY, transform.localScale.z);
     }
-    
 }

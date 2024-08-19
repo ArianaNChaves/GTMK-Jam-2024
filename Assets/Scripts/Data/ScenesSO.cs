@@ -23,16 +23,19 @@ public class ScenesSO : ScriptableObject
     
     public void NextScene()
     {
-        if (_index == 10)
+        if (_index == goldenPathList.Count)
         {
             TransitionManager.Instance().Transition(goldenPathList[0], transition, LoadDelay);
             _index = 0;
         }
-        string scene = goldenPathList[_index + 1];
-        _index++;
-        CurrentPath = scene;
-        Debug.Log($"Me muevo a la escena: {CurrentPath}");
-        TransitionManager.Instance().Transition(scene, transition, LoadDelay);
+        else
+        {
+            string scene = goldenPathList[_index + 1];
+            _index++;
+            CurrentPath = scene;
+            Debug.Log($"Me muevo a la escena: {CurrentPath}");
+            TransitionManager.Instance().Transition(scene, transition, LoadDelay);  
+        }
     }
 
     public void LastScene()
@@ -50,5 +53,6 @@ public class ScenesSO : ScriptableObject
         CurrentPath = "Main Menu";
         _index = 0;
     }
+    
     
 }
