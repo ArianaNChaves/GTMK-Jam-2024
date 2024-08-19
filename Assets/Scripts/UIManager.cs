@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button settingsButton;
     [SerializeField] private Button settingsBackButton;
     [SerializeField] private Button creditsBackButton;
+    [SerializeField] private Button soundEffectsButton;
 
     [Header("Panels")] 
     [SerializeField] private GameObject creditsPanel;
@@ -37,7 +38,9 @@ public class UIManager : MonoBehaviour
         settingsButton.onClick.AddListener(OnSettingsButtonClicked);
         settingsBackButton.onClick.AddListener(OnSettingsBackButtonClicked);
         creditsBackButton.onClick.AddListener(OnCreditsBackButtonClicked);
+        soundEffectsButton.onClick.AddListener(OnSoundEffectsButtonClicked);
     }
+
 
     private void Start()
     {
@@ -83,6 +86,10 @@ public class UIManager : MonoBehaviour
     {
         buttonsPanel.SetActive(true);
         creditsPanel.SetActive(false);
+    }
+    private void OnSoundEffectsButtonClicked()
+    {
+        AudioManager.Instance.PlayEffect("Player Shot");
     }
     public void SetMusicVolume()
     {
