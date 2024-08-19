@@ -15,7 +15,7 @@ public class CollisionCheck : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player") && _waitImpact)
         {
