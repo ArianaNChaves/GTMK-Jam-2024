@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d5913205777c541996a57bff75d215, type: 3}
+  m_Name: Scenes Data
+  m_EditorClassIdentifier: 
+  goldenPathList:
+  - Main Menu
+  - borrar
+  - borrar 2
+  - Phase 1
+  - Phase 2
+  - Phase 1
+  - Phase 3
+  - Phase 1
+  - Phase 4
+  - Final Cinematic
+  - Credits
+  transition: {fileID: 11400000, guid: b577ec7af0d48c34a9d31ce17f830a8d, type: 2}
+  LoadDelay: 0.5
+  CurrentPath: Phase 3
+  _index: 6

@@ -17,6 +17,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject creditsPanel;
     [SerializeField] private GameObject settingsPanel;
 
+    [Header("Data")] 
+    [SerializeField] private ScenesSO sceneData;
+    [SerializeField] private BulletDataSO bulletData;
+
     private void Awake()
     {
         playButton.onClick.AddListener(OnPlayButtonClicked);
@@ -24,9 +28,18 @@ public class UIManager : MonoBehaviour
         exitButton.onClick.AddListener(OnExitButtonClicked);
         settingsButton.onClick.AddListener(OnSettingsButtonClicked);
     }
-    
+
+    private void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     private void OnPlayButtonClicked()
     {
+        sceneData.ResetPath();
+        sceneData.NextScene();
+        bulletData.currentBullets = 0;
         Debug.Log("play");
     }
 
