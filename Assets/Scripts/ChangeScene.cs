@@ -17,6 +17,7 @@ public class ChangeScene : MonoBehaviour
     }
     private void Start()
     {
+        AudioManager.Instance.PlayMusic("Main Menu");
         _duration = (float)_timeline.duration;
         Invoke(nameof(OnEndTimeline),_duration);
     }

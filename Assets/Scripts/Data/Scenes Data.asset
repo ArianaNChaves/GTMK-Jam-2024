@@ -15,7 +15,6 @@ MonoBehaviour:
   goldenPathList:
   - Main Menu
   - Tutorial
-  - borrar 2
   - Phase 1
   - Phase 2
   - Phase 1
@@ -23,8 +22,7 @@ MonoBehaviour:
   - Phase 1
   - Phase 4
   - Final Cinematic
-  - Credits
   transition: {fileID: 11400000, guid: b577ec7af0d48c34a9d31ce17f830a8d, type: 2}
   LoadDelay: 0.5
-  CurrentPath: borrar
+  CurrentPath: Main Menu
   _index: 1

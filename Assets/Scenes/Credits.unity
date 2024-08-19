@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 252202748}
   - component: {fileID: 252202750}
   - component: {fileID: 252202749}
+  - component: {fileID: 252202751}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -319,6 +320,19 @@ PlayableDirector:
     value: {fileID: 1994519260}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &252202751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252202747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d5f500a92087f40b65ff566f697fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenesData: {fileID: 11400000, guid: 90eb16772c0c6b74d80189c5d049b1af, type: 2}
 --- !u!1 &264092387
 GameObject:
   m_ObjectHideFlags: 0
