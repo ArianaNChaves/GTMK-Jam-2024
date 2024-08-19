@@ -7,6 +7,8 @@ public class AudioPlay : MonoBehaviour
     void Start()
     {
         AudioManager.Instance.PlayMusic("Final");
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 }
