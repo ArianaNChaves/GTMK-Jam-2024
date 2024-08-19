@@ -23,17 +23,17 @@ public class ScenesSO : ScriptableObject
     
     public void NextScene()
     {
-        if (_index == goldenPathList.Count)
+        if (_index >= goldenPathList.Count - 1)
         {
-            string scene = goldenPathList[0];
             _index = 0;
+            string scene = goldenPathList[_index];
             CurrentPath = scene;
             TransitionManager.Instance().Transition(scene, transition, LoadDelay);
         }
         else
         {
-            string scene = goldenPathList[_index + 1];
             _index++;
+            string scene = goldenPathList[_index];
             CurrentPath = scene;
             Debug.Log($"Me muevo a la escena: {CurrentPath}");
             TransitionManager.Instance().Transition(scene, transition, LoadDelay);  
