@@ -13,9 +13,12 @@ public class ObstacleMove : MonoBehaviour
     private bool _isMovingToPointB = true;
     private const float ProximityThreshold = 0.1f;
 
+    private Animator anim;
+
     void Start()
     {
         _targetPosition = pointB.position;
+        anim = GetComponent<Animator>();
     }
     void Update()
     {
@@ -37,6 +40,7 @@ public class ObstacleMove : MonoBehaviour
 
     private void ChangeDirection()
     {
+        anim.SetTrigger("ChangeHand");
         _isMovingToPointB = !_isMovingToPointB;
         _targetPosition = _isMovingToPointB ? pointB.position : center.position;
     }
