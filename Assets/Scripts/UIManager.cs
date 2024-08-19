@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private BulletDataSO bulletData;
     [SerializeField] private AudioSO audioData;
     
-    [Header("Silders")] 
+    [Header("Sliders")] 
     [SerializeField] private Slider musicVolume;
     [SerializeField] private Slider sfxVolume;
 
@@ -46,6 +46,8 @@ public class UIManager : MonoBehaviour
         
         AudioManager.Instance.SfxVolume(audioData.GetSFXVolume());
         sfxVolume.value = audioData.GetSFXVolume();
+        
+        AudioManager.Instance.PlayMusic("Main Menu");
     }
     private void OnPlayButtonClicked()
     {

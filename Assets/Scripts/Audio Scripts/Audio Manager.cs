@@ -39,7 +39,6 @@ public class AudioManager : MonoBehaviour
             _lastSong = sound.soundName;
             musicSource.clip = sound.clip;
             musicSource.Play();
-            
         }
     }
     public void PlayEffect(string effectName)
@@ -64,7 +63,6 @@ public class AudioManager : MonoBehaviour
         audioSettings.SetSFXVolume(volume);
         sfxSource.volume = volume;
     }
-
     public void Destroy()
     {
         Destroy(gameObject);
