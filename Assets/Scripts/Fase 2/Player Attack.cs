@@ -36,6 +36,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && _canFire)
         {
+            AudioManager.Instance.PlayEffect("Player Shot");
             _fireRateTime = 0;
             _bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             _bulletScript = _bullet.GetComponent<Bullet>();

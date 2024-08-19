@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 5986b7f89553f504da02b4ae12b702d5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hands_3
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1691
+        width: 2675
+        height: 1434
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1d42220cf2fcc429519dbdaac8a321
+      internalID: 963379439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hands_47
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 388
+        width: 1978
+        height: 1003
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc857e6484598943b23382b41b4d59b
+      internalID: 1555454424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hands_0: 1068854187
+      Hands_1: 2014698084
+      Hands_10: -1185912938
+      Hands_11: -656945331
+      Hands_12: -85441338
+      Hands_13: 1624228000
+      Hands_14: -624231037
+      Hands_15: -247951871
+      Hands_16: -54414378
+      Hands_17: 1130158110
+      Hands_18: 1780691442
+      Hands_19: 2136458535
+      Hands_2: 29050648
+      Hands_20: -1649457817
+      Hands_21: 1026328004
+      Hands_22: 522583357
+      Hands_23: -215579225
+      Hands_24: -2049770038
+      Hands_25: -1754571977
+      Hands_26: 783412123
+      Hands_27: -1675812291
+      Hands_28: 2015785837
+      Hands_29: -962481700
+      Hands_3: 963379439
+      Hands_30: 900483472
+      Hands_31: -208915622
+      Hands_32: 384118914
+      Hands_33: -457762328
+      Hands_34: -1474116599
+      Hands_35: -223519904
+      Hands_36: -1972361939
+      Hands_37: -1767461936
+      Hands_38: -1913436701
+      Hands_39: -749049403
+      Hands_4: -23697658
+      Hands_40: -563379732
+      Hands_41: -1953990371
+      Hands_42: -916011523
+      Hands_43: 1241694078
+      Hands_44: -1423244873
+      Hands_45: -732301067
+      Hands_46: -1616804748
+      Hands_47: 1555454424
+      Hands_48: 180140163
+      Hands_49: -1809022718
+      Hands_5: 1679204017
+      Hands_50: -2001900267
+      Hands_51: -676561614
+      Hands_52: -570061970
+      Hands_53: -1606212722
+      Hands_54: -428383602
+      Hands_55: -51539840
+      Hands_56: 1361785039
+      Hands_57: 1797939372
+      Hands_58: 1127934615
+      Hands_59: -2058200337
+      Hands_6: -1487299922
+      Hands_60: -2012158236
+      Hands_61: 519063262
+      Hands_62: -2001789444
+      Hands_63: 1425646322
+      Hands_64: 502716468
+      Hands_65: -584086076
+      Hands_66: -95240646
+      Hands_67: -482300957
+      Hands_68: 1169299787
+      Hands_69: -1150953998
+      Hands_7: 1654364533
+      Hands_70: 1054142867
+      Hands_71: -1889865235
+      Hands_72: -330824489
+      Hands_73: 452917095
+      Hands_74: 1988208333
+      Hands_75: -421633255
+      Hands_76: -1322918487
+      Hands_77: -770651794
+      Hands_78: 739743216
+      Hands_79: 1278456184
+      Hands_8: -2001304293
+      Hands_80: -2036883959
+      Hands_81: 1507952546
+      Hands_82: 1721651552
+      Hands_83: -1613730207
+      Hands_84: -1568916322
+      Hands_85: 614481750
+      Hands_86: -367685705
+      Hands_9: 642098944
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

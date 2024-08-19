@@ -27,6 +27,8 @@ public class UIBulletManager : MonoBehaviour
 
     private void AddBullet()
     {
+        AudioManager.Instance.PlayEffect("Add Bullet");
+
         bulletData.currentBullets = Mathf.Clamp(bulletData.currentBullets + 1, 0, bulletData.maxBullets);
         UpdateUI();
     }
