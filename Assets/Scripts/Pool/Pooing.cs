@@ -29,17 +29,21 @@ public class Pool : MonoBehaviour
         {
             if (!bullet.gameObject.activeInHierarchy)
             {
-                if (bulletCount == BulletList.Count)
+                /*if (bulletCount == BulletList.Count)
                 {
                     bulletCount = 0;
                     return BulletList[bulletCount];
-                }
+                }*/
                 if (BulletList.IndexOf(bullet) == bulletCount)
                 {
                     bulletCount++;
+                    if (bulletCount >= BulletList.Count)
+                    {
+                       bulletCount = 0;
+                    }
                     return BulletList[bulletCount];
                 }
-              
+
             }
         }
         if (BulletList.Count < maxBullet)
