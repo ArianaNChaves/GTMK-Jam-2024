@@ -9,6 +9,9 @@ public class Pool : MonoBehaviour
     [SerializeField] private int maxBullet;
     private List<GameObject> BulletList;
 
+    [Header("Count")]
+    private int bulletCount;
+
     private void Start()
     {
         BulletList = new List<GameObject>();
@@ -26,7 +29,21 @@ public class Pool : MonoBehaviour
         {
             if (!bullet.gameObject.activeInHierarchy)
             {
-                return bullet.gameObject;
+                /*if (bulletCount == BulletList.Count)
+                {
+                    bulletCount = 0;
+                    return BulletList[bulletCount];
+                }*/
+                if (BulletList.IndexOf(bullet) == bulletCount)
+                {
+                    bulletCount++;
+                    if (bulletCount >= BulletList.Count)
+                    {
+                       bulletCount = 0;
+                    }
+                    return BulletList[bulletCount];
+                }
+
             }
         }
         if (BulletList.Count < maxBullet)
