@@ -859,7 +859,7 @@ Transform:
   m_GameObject: {fileID: 477954086}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.48, y: 0, z: 0}
+  m_LocalPosition: {x: -2.43, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2275,7 +2275,7 @@ Transform:
   m_GameObject: {fileID: 1327921947}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.38, z: 0}
+  m_LocalPosition: {x: 0, y: 2.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2477,7 +2477,7 @@ Transform:
   m_GameObject: {fileID: 1434118734}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.27, y: 0, z: 0}
+  m_LocalPosition: {x: 2.43, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3394,6 +3394,13 @@ MonoBehaviour:
   sceneData: {fileID: 11400000, guid: 90eb16772c0c6b74d80189c5d049b1af, type: 2}
   bulletData: {fileID: 11400000, guid: 7a11cbbe34b32af4a8eeb1a17e19d006, type: 2}
   enemyData: {fileID: 11400000, guid: 50af9c85ab2d07148b0d7fef40fdc85c, type: 2}
+  spritesRenderers:
+  - {fileID: 1286126440}
+  - {fileID: 2022903506}
+  - {fileID: 1974587806}
+  - {fileID: 1073268053}
+  - {fileID: 914498427}
+  - {fileID: 1451731490}
 --- !u!114 &2042825079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3407,7 +3414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 50
-  timeToRotate: 2
+  timeToRotate: 3
 --- !u!58 &2042825080
 CircleCollider2D:
   m_ObjectHideFlags: 0

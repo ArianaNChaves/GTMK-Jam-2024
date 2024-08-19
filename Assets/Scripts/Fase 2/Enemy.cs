@@ -13,21 +13,22 @@ public class Enemy : MonoBehaviour
     [SerializeField] private ScenesSO sceneData;
     [SerializeField] private BulletDataSO bulletData;
     [SerializeField] private EnemySO enemyData;
+    [SerializeField] private List<SpriteRenderer> spritesRenderers;
 
     private int _health;
     private Color _default;
     private Color _hitOut;
     private Color _hitIn;
-    private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
         _health = enemyData.GetMaxHealth();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        _default = _spriteRenderer.color;
-        _hitIn = Color.white;
+        _default = Color.white;
+        _hitIn = Color.red;
         _hitOut = Color.black;
     }
+
+
     private void OnEnable()
     {
         EnemyMouth.OnHit += MouthHit;
@@ -62,16 +63,28 @@ public class Enemy : MonoBehaviour
     }
     private void HitInFlash()
     {
-        _spriteRenderer.color = Color.Lerp(_default, _hitIn, 0.5f);
+        foreach (var sprite in spritesRenderers)
+        {
+            sprite.color = Color.Lerp(_default, _hitIn, 0.5f);
+        }
+        // _spriteRenderer.color = Color.Lerp(_default, _hitIn, 0.5f);
         Invoke(nameof(ReturnToNormalColor), 0.2f);
     }
     private void HitOutFlash()
     {
-        _spriteRenderer.color = Color.Lerp(_default, _hitOut, 0.5f);
+        foreach (var sprite in spritesRenderers)
+        {
+            sprite.color = Color.Lerp(_default, _hitOut, 0.5f);
+        }
+        // _spriteRenderer.color = Color.Lerp(_default, _hitOut, 0.5f);
         Invoke(nameof(ReturnToNormalColor), 0.2f);
     }
     private void ReturnToNormalColor()
     {
-        _spriteRenderer.color = _default;
+        foreach (var sprite in spritesRenderers)
+        {
+            sprite.color = _default;
+        }
+        // _spriteRenderer.color = _default;
     }
 }
