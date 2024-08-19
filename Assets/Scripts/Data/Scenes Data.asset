@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldenPathList:
   - Main Menu
-  - borrar
+  - Tutorial
   - borrar 2
   - Phase 1
   - Phase 2
@@ -26,5 +26,5 @@ MonoBehaviour:
   - Credits
   transition: {fileID: 11400000, guid: b577ec7af0d48c34a9d31ce17f830a8d, type: 2}
   LoadDelay: 0.5
-  CurrentPath: Phase 3
-  _index: 6
+  CurrentPath: borrar
+  _index: 1
