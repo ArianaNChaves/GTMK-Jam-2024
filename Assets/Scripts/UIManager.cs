@@ -13,10 +13,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button exitButton;
     [SerializeField] private Button settingsButton;
     [SerializeField] private Button settingsBackButton;
+    [SerializeField] private Button creditsBackButton;
 
     [Header("Panels")] 
     [SerializeField] private GameObject creditsPanel;
     [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject buttonsPanel;
 
     [Header("Data")] 
     [SerializeField] private ScenesSO sceneData;
@@ -33,7 +35,8 @@ public class UIManager : MonoBehaviour
         creditsButton.onClick.AddListener(OnCreditsButtonClicked);
         exitButton.onClick.AddListener(OnExitButtonClicked);
         settingsButton.onClick.AddListener(OnSettingsButtonClicked);
-        settingsBackButton.onClick.AddListener((OnSettingsBackButtonClickd));
+        settingsBackButton.onClick.AddListener(OnSettingsBackButtonClicked);
+        creditsBackButton.onClick.AddListener(OnCreditsBackButtonClicked);
     }
 
     private void Start()
@@ -59,19 +62,27 @@ public class UIManager : MonoBehaviour
     private void OnCreditsButtonClicked()
     {
         creditsPanel.SetActive(!creditsPanel.activeInHierarchy);
+        buttonsPanel.SetActive(false);
     }
     private void OnExitButtonClicked()
     {
         Debug.Log("exit");
+        Application.Quit();
     }
     private void OnSettingsButtonClicked()
     {
         settingsPanel.SetActive(!settingsPanel.activeInHierarchy);
+        buttonsPanel.SetActive(false);
     }
-    private void OnSettingsBackButtonClickd()
+    private void OnSettingsBackButtonClicked()
     {
+        buttonsPanel.SetActive(true);
         settingsPanel.SetActive(false);
-
+    }
+    private void OnCreditsBackButtonClicked()
+    {
+        buttonsPanel.SetActive(true);
+        creditsPanel.SetActive(false);
     }
     public void SetMusicVolume()
     {
