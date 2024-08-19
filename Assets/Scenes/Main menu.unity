@@ -1049,7 +1049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.6, y: 88.2}
+  m_AnchoredPosition: {x: -13, y: 88.2}
   m_SizeDelta: {x: 122.947, y: 24.368}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &383865649
@@ -1073,8 +1073,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Chaves Ariana Noelia - Gameplay Developer\nVarisco Joaqu\xEDn Sacha -
-    Gameplay Developer\nFetter Angelina - 2D Artist\nGalfr\xE9 Gonzalo David - UI
-    Developer"
+    Gameplay Developer\nFetter Angelina - 2D Artist\nGalfre Gonzalo David - UI Developer"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a20995ec0132f09419a7598d4f78fb11, type: 2}
   m_sharedMaterial: {fileID: -9150407726178478205, guid: a20995ec0132f09419a7598d4f78fb11, type: 2}
@@ -1137,7 +1136,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -131.61963, y: -3.3617554, z: -172.16357, w: -166.21124}
+  m_margin: {x: -148.427, y: -3.3617554, z: -172.16357, w: -166.21124}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
