@@ -692,8 +692,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04798047, y: -0.055718727}
-  m_Size: {x: 0.23386285, y: 0.3740221}
+  m_Offset: {x: -0.05749693, y: 0.29953885}
+  m_Size: {x: 0.8954382, y: 1.0845363}
   m_Direction: 0
 --- !u!114 &263099044
 MonoBehaviour:
@@ -932,8 +932,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.060039975, y: -0.07100728}
-  m_Size: {x: 0.2515598, y: 0.3933876}
+  m_Offset: {x: -0.02750277, y: 0.30684984}
+  m_Size: {x: 0.9567845, y: 1.0530647}
   m_Direction: 0
 --- !u!114 &363172815
 MonoBehaviour:
@@ -1429,8 +1429,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05766724, y: -0.06518331}
-  m_Size: {x: 0.26209527, y: 0.37664974}
+  m_Offset: {x: -0.0043374407, y: 0.31837714}
+  m_Size: {x: 0.8018526, y: 1.0272481}
   m_Direction: 0
 --- !u!114 &512128954
 MonoBehaviour:
@@ -1922,8 +1922,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06996833, y: -0.07147692}
-  m_Size: {x: 0.28274664, y: 0.38116375}
+  m_Offset: {x: 0.017532105, y: 0.2972406}
+  m_Size: {x: 0.8759273, y: 1.0321114}
   m_Direction: 0
 --- !u!114 &1397930418
 MonoBehaviour:
