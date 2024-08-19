@@ -15,6 +15,8 @@ public class ShoterControl : MonoBehaviour
     [Header("Gun")]
     [SerializeField] private Transform[] Spawns;
 
+    
+
     private void Start()
     {
         currentTime = maxTime;
