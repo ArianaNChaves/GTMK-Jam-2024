@@ -2237,6 +2237,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1338818843911013294, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338818843911013294, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338818843911013294, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1913932727342307852, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
       propertyPath: enemyPosition
       value: 
@@ -2297,6 +2309,18 @@ PrefabInstance:
       propertyPath: enemyPosition
       value: 
       objectReference: {fileID: 70139254}
+    - target: {fileID: 7124390753215630088, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124390753215630088, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124390753215630088, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

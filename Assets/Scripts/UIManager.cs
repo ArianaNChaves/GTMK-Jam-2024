@@ -73,12 +73,12 @@ public class UIManager : MonoBehaviour
         settingsPanel.SetActive(false);
 
     }
-    private void SetMusicVolume()
+    public void SetMusicVolume()
     {
         AudioManager.Instance.MusicVolume(musicVolume.value);
         audioData.SetMusicVolume(musicVolume.value);
     }
-    private void SetSFXVolume()
+    public void SetSFXVolume()
     {
         AudioManager.Instance.SfxVolume(sfxVolume.value);
         audioData.SetSFXVolume(sfxVolume.value);
