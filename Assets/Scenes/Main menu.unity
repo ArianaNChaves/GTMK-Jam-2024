@@ -4061,6 +4061,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4611295637769714160, guid: b9c1c3b0c6cd7f2498b364fa56eb45b8, type: 3}
+      propertyPath: sfxSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611295637769714160, guid: b9c1c3b0c6cd7f2498b364fa56eb45b8, type: 3}
+      propertyPath: sfxSounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 449f94790b1782b44abfb9a3159daecb, type: 3}
+    - target: {fileID: 4611295637769714160, guid: b9c1c3b0c6cd7f2498b364fa56eb45b8, type: 3}
+      propertyPath: sfxSounds.Array.data[4].soundName
+      value: Player Hit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

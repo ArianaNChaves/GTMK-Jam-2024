@@ -11,6 +11,7 @@ public class CollisionCheck : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && !_waitImpact)
         {
             _waitImpact = true;
+            AudioManager.Instance.PlayEffect("Player Hit");
             PlayerScale.OnHitPlayer.Invoke();
         }
     }
