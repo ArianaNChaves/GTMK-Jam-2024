@@ -276,7 +276,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.015686275}
   m_FlipX: 0
@@ -1911,7 +1911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Aim to the mouth
+  m_text: Aim to the mouth!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a20995ec0132f09419a7598d4f78fb11, type: 2}
   m_sharedMaterial: {fileID: -9150407726178478205, guid: a20995ec0132f09419a7598d4f78fb11, type: 2}
