@@ -1071,7 +1071,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1396149610}
   - {fileID: 1298932637}
@@ -1544,7 +1544,6 @@ GameObject:
   - component: {fileID: 1112541357}
   - component: {fileID: 1112541358}
   - component: {fileID: 1112541359}
-  - component: {fileID: 1112541360}
   m_Layer: 0
   m_Name: Circle (1)
   m_TagString: Enemy
@@ -1666,33 +1665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecda4d5d49e8ad846a5f04148b08c65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &1112541360
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112541355}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1112912053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,7 +1890,6 @@ GameObject:
   - component: {fileID: 1298932638}
   - component: {fileID: 1298932639}
   - component: {fileID: 1298932640}
-  - component: {fileID: 1298932641}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Enemy
@@ -2040,33 +2011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecda4d5d49e8ad846a5f04148b08c65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &1298932641
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298932636}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1396149609
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,7 +2718,6 @@ GameObject:
   - component: {fileID: 1741933255}
   - component: {fileID: 1741933256}
   - component: {fileID: 1741933257}
-  - component: {fileID: 1741933258}
   m_Layer: 0
   m_Name: Circle (1)
   m_TagString: Enemy
@@ -2896,33 +2839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecda4d5d49e8ad846a5f04148b08c65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &1741933258
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741933253}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1815400596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3042,7 +2958,6 @@ GameObject:
   - component: {fileID: 1867805201}
   - component: {fileID: 1867805202}
   - component: {fileID: 1867805203}
-  - component: {fileID: 1867805204}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Enemy
@@ -3164,33 +3079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecda4d5d49e8ad846a5f04148b08c65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &1867805204
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867805199}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1908533879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3858,14 +3746,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 765482263260608534, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.539
-      objectReference: {fileID: 0}
-    - target: {fileID: 765482263260608534, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 946409826181001279, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3874,18 +3754,6 @@ PrefabInstance:
       propertyPath: enemyPosition
       value: 
       objectReference: {fileID: 1519982387}
-    - target: {fileID: 3666994204849393952, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3666994204849393952, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3666994204849393952, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 3666994204849393952, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3926,22 +3794,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4917103161946397566, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
-      propertyPath: scene
-      value: Fase 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4917103161946397566, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
-      propertyPath: bulletData
-      value: 
-      objectReference: {fileID: 11400000, guid: 7a11cbbe34b32af4a8eeb1a17e19d006, type: 2}
-    - target: {fileID: 4917103161946397566, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
-      propertyPath: transition
-      value: 
-      objectReference: {fileID: 11400000, guid: 057babd6f13132c449650d99e3c4e99c, type: 2}
-    - target: {fileID: 4948831762161302866, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
-      propertyPath: mouseSprite
-      value: 
-      objectReference: {fileID: -1372342196, guid: 02ea9c2c0c44d1942b53c024ff17c11e, type: 3}
     - target: {fileID: 4948831762161302866, guid: 29cfaf835e40d1e41b181e32a91c0e98, type: 3}
       propertyPath: enemyPosition
       value: 
