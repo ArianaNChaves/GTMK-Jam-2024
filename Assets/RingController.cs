@@ -50,6 +50,7 @@ public class RingController : MonoBehaviour
 
             if (transform.localScale == player.localScale)
             {
+                anims.Play("Idle_Ring");
                 UIBulletManager.OnBulletAdded.Invoke();
                 CanChange = false;
                 Invoke(nameof(ChangeScale), 0.3f);
