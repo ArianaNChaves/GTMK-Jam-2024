@@ -313,7 +313,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.5176471, g: 0.5176471, b: 0.5176471, a: 0.015686275}
   m_FlipX: 0
@@ -1544,6 +1544,7 @@ GameObject:
   - component: {fileID: 1112541357}
   - component: {fileID: 1112541358}
   - component: {fileID: 1112541359}
+  - component: {fileID: 1112541360}
   m_Layer: 0
   m_Name: Circle (1)
   m_TagString: Enemy
@@ -1665,6 +1666,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecda4d5d49e8ad846a5f04148b08c65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1112541360
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112541355}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1112912053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,6 +1918,7 @@ GameObject:
   - component: {fileID: 1298932638}
   - component: {fileID: 1298932639}
   - component: {fileID: 1298932640}
+  - component: {fileID: 1298932641}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Enemy
@@ -2011,6 +2040,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecda4d5d49e8ad846a5f04148b08c65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1298932641
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298932636}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1396149609
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,6 +2774,7 @@ GameObject:
   - component: {fileID: 1741933255}
   - component: {fileID: 1741933256}
   - component: {fileID: 1741933257}
+  - component: {fileID: 1741933258}
   m_Layer: 0
   m_Name: Circle (1)
   m_TagString: Enemy
@@ -2839,6 +2896,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecda4d5d49e8ad846a5f04148b08c65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1741933258
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741933253}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1815400596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2958,6 +3042,7 @@ GameObject:
   - component: {fileID: 1867805201}
   - component: {fileID: 1867805202}
   - component: {fileID: 1867805203}
+  - component: {fileID: 1867805204}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Enemy
@@ -3079,6 +3164,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecda4d5d49e8ad846a5f04148b08c65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1867805204
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867805199}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1908533879
 GameObject:
   m_ObjectHideFlags: 0
