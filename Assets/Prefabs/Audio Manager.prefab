@@ -60,7 +60,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: e59f3d2944585e048b2ff0e5ab0f3b5a, type: 3}
   - soundName: Scale Size
     clip: {fileID: 8300000, guid: 439571fbdbd551042a1803d5541827ba, type: 3}
-  - soundName: Pick Up
+  - soundName: Add Bullet
     clip: {fileID: 8300000, guid: e4d5746db0e08fe4dac17ead4cb6f197, type: 3}
   musicSource: {fileID: 3284523887214868821}
   sfxSource: {fileID: 749915952678541777}

@@ -63,6 +63,7 @@ public class Enemy : MonoBehaviour
     }
     private void HitInFlash()
     {
+        AudioManager.Instance.PlayEffect("Enemy Hit");
         foreach (var sprite in spritesRenderers)
         {
             sprite.color = Color.Lerp(_default, _hitIn, 0.5f);
@@ -72,6 +73,7 @@ public class Enemy : MonoBehaviour
     }
     private void HitOutFlash()
     {
+        AudioManager.Instance.PlayEffect("Enemy Hit");
         foreach (var sprite in spritesRenderers)
         {
             sprite.color = Color.Lerp(_default, _hitOut, 0.5f);

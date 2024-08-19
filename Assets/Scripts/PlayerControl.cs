@@ -34,7 +34,6 @@ public class PlayerControl : MonoBehaviour
         {
             scaleMod *= -1;
         }
-
         transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(transform.localScale.x + scaleMod, transform.localScale.y + scaleMod), 1);
     }
 }
