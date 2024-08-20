@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class BulletControl : MonoBehaviour
 {
-    [Header("Pool")]
-
-    [SerializeField] private GameObject pool;
 
     [Header("Speed")]
     [SerializeField] private float speed;
@@ -51,7 +48,7 @@ public class BulletControl : MonoBehaviour
         rb2D.velocity = transform.right * speed;
         if (currentTime <= 0)
         {
-            pool.GetComponent<Pool>().ReturnBullet(gameObject);
+            Destroy(gameObject);
             currentTime = maxTime;
         }
     }
@@ -72,7 +69,7 @@ public class BulletControl : MonoBehaviour
                 player.GetComponent<PlayerControl>().ChangeScale(Match);
             }
         }
-        pool.GetComponent<Pool>().ReturnBullet(gameObject);
+        Destroy(gameObject);
     }
 
     private void BulletType()

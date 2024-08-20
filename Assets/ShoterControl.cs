@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShoterControl : MonoBehaviour
 {
     [Header("Pool")]
-    
+    public GameObject BulletPrefab;
     [SerializeField] private Pool pool;
 
     [Header("Timer")]
@@ -14,8 +14,6 @@ public class ShoterControl : MonoBehaviour
 
     [Header("Gun")]
     [SerializeField] private Transform[] Spawns;
-
-    
 
     private void Start()
     {
@@ -28,13 +26,8 @@ public class ShoterControl : MonoBehaviour
         if (currentTime <= 0)
         {
             int randNum = Random.Range(0, Spawns.Length);
-            GameObject Bullet = pool.GetBullet();
+            GameObject Bullet = Instantiate(BulletPrefab, Spawns[randNum].position, Quaternion.identity);
 
-            if (Bullet != null)
-            {
-                Bullet.transform.position = Spawns[randNum].position;
-                Bullet.SetActive(true);
-            }
             currentTime = maxTime;
         }
     }
