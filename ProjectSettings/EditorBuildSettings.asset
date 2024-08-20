@@ -24,9 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Phase 4.unity
     guid: 423f9000f1300924b9e73e3f53e85d11
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: 36b0965325a41494ba6093656b00caf8
-  - enabled: 1
     path: Assets/Scenes/Final cutscene.unity
     guid: 72e9151b571ac15419bd1adb3b524112
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 36b0965325a41494ba6093656b00caf8
   m_configObjects: {}
