@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scenes Data
   m_EditorClassIdentifier: 
   goldenPathList:
-  - Main Menu
+  - Main menu
   - Tutorial
   - Phase 1
   - Phase 2
@@ -21,6 +21,7 @@ MonoBehaviour:
   - Phase 3
   - Phase 1
   - Phase 4
+  - Final cutscene
   - Credits
   transition: {fileID: 11400000, guid: b577ec7af0d48c34a9d31ce17f830a8d, type: 2}
   LoadDelay: 0.5
